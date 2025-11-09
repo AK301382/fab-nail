@@ -232,6 +232,8 @@ const AdminGallery = () => {
   };
 
   const handleSubmitColor = async () => {
+    if (isSavingColor) return; // Prevent multiple submissions
+    setIsSavingColor(true);
     try {
       if (editColor) {
         await axios.put(`${API_URL}/api/gallery-colors/${editColor.id}`, colorFormData);
@@ -245,6 +247,8 @@ const AdminGallery = () => {
     } catch (error) {
       console.error('Error saving color:', error);
       toast.error(t('gallery.saveColorError'));
+    } finally {
+      setIsSavingColor(false);
     }
   };
 
