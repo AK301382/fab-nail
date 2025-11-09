@@ -498,16 +498,24 @@ const AdminServices = () => {
             />
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setIsEditOpen(false)}>
+            <Button variant="outline" onClick={() => setIsEditOpen(false)} disabled={isSavingService}>
               {t('services.cancel')}
             </Button>
             <Button
               onClick={handleSubmit}
+              disabled={isSavingService}
               style={{ backgroundColor: '#8B6F8E' }}
               className="text-white"
               data-testid="save-service-button"
             >
-              {t('services.save')}
+              {isSavingService ? (
+                <>
+                  <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+                  {t('common.loading')}
+                </>
+              ) : (
+                t('services.save')
+              )}
             </Button>
           </DialogFooter>
         </DialogContent>
