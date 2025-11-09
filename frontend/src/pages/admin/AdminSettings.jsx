@@ -73,6 +73,7 @@ const AdminSettings = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (saving) return; // Prevent multiple submissions
     setSaving(true);
     try {
       const response = await fetch(`${API_URL}/api/settings`, {
