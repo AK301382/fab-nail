@@ -682,16 +682,24 @@ const AdminGallery = () => {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setIsColorOpen(false)}>
+            <Button variant="outline" onClick={() => setIsColorOpen(false)} disabled={isSavingColor}>
               {t('gallery.cancel')}
             </Button>
             <Button
               onClick={handleSubmitColor}
+              disabled={isSavingColor}
               style={{ backgroundColor: '#8B6F8E' }}
               className="text-white"
               data-testid="save-color-button"
             >
-              {t('gallery.save')}
+              {isSavingColor ? (
+                <>
+                  <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+                  {t('common.loading')}
+                </>
+              ) : (
+                t('gallery.save')
+              )}
             </Button>
           </DialogFooter>
         </DialogContent>
