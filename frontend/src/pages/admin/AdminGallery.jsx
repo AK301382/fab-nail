@@ -179,6 +179,8 @@ const AdminGallery = () => {
   };
 
   const handleSubmitStyle = async () => {
+    if (isSavingStyle) return; // Prevent multiple submissions
+    setIsSavingStyle(true);
     try {
       if (editStyle) {
         await axios.put(`${API_URL}/api/gallery-styles/${editStyle.id}`, styleFormData);
@@ -199,6 +201,8 @@ const AdminGallery = () => {
     } catch (error) {
       console.error('Error saving style:', error);
       toast.error(t('gallery.saveStyleError'));
+    } finally {
+      setIsSavingStyle(false);
     }
   };
 
