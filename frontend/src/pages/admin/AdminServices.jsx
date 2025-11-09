@@ -159,6 +159,8 @@ const AdminServices = () => {
   };
 
   const handleSubmitCategory = async () => {
+    if (isSavingCategory) return; // Prevent multiple submissions
+    setIsSavingCategory(true);
     try {
       if (editCategory) {
         await axios.put(`${API_URL}/api/categories/${editCategory.id}`, categoryFormData);
@@ -172,6 +174,8 @@ const AdminServices = () => {
     } catch (error) {
       console.error('Error saving category:', error);
       toast.error(t('services.saveError'));
+    } finally {
+      setIsSavingCategory(false);
     }
   };
 
