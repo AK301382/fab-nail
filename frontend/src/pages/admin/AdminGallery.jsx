@@ -631,16 +631,24 @@ const AdminGallery = () => {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setIsStyleOpen(false)}>
+            <Button variant="outline" onClick={() => setIsStyleOpen(false)} disabled={isSavingStyle}>
               {t('gallery.cancel')}
             </Button>
             <Button
               onClick={handleSubmitStyle}
+              disabled={isSavingStyle}
               style={{ backgroundColor: '#8B6F8E' }}
               className="text-white"
               data-testid="save-style-button"
             >
-              {t('gallery.save')}
+              {isSavingStyle ? (
+                <>
+                  <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+                  {t('common.loading')}
+                </>
+              ) : (
+                t('gallery.save')
+              )}
             </Button>
           </DialogFooter>
         </DialogContent>
