@@ -125,6 +125,8 @@ const AdminGallery = () => {
   };
 
   const handleSubmit = async () => {
+    if (isSavingGallery) return; // Prevent multiple submissions
+    setIsSavingGallery(true);
     try {
       const submitData = {
         title: formData.title,
@@ -146,6 +148,8 @@ const AdminGallery = () => {
     } catch (error) {
       console.error('Error saving gallery item:', error);
       toast.error(t('gallery.saveItemError'));
+    } finally {
+      setIsSavingGallery(false);
     }
   };
 
