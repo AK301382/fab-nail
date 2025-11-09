@@ -50,6 +50,10 @@ const AdminServices = () => {
   const [editCategory, setEditCategory] = useState(null);
   const [categoryFormData, setCategoryFormData] = useState({ name: '' });
   const [deleteCategoryId, setDeleteCategoryId] = useState(null);
+  
+  // Loading states
+  const [isSavingService, setIsSavingService] = useState(false);
+  const [isSavingCategory, setIsSavingCategory] = useState(false);
 
   useEffect(() => {
     fetchData();
