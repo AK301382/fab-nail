@@ -55,6 +55,11 @@ const AdminGallery = () => {
   const [editColor, setEditColor] = useState(null);
   const [colorFormData, setColorFormData] = useState({ name: '' });
   const [deleteColorId, setDeleteColorId] = useState(null);
+  
+  // Loading states
+  const [isSavingGallery, setIsSavingGallery] = useState(false);
+  const [isSavingStyle, setIsSavingStyle] = useState(false);
+  const [isSavingColor, setIsSavingColor] = useState(false);
 
   useEffect(() => {
     fetchData();
