@@ -79,6 +79,8 @@ const AdminArtists = () => {
   };
 
   const handleSubmit = async () => {
+    if (isSavingArtist) return; // Prevent multiple submissions
+    setIsSavingArtist(true);
     try {
       if (editArtist) {
         await axios.put(`${API_URL}/api/artists/${editArtist.id}`, formData);
@@ -92,6 +94,8 @@ const AdminArtists = () => {
     } catch (error) {
       console.error('Error saving artist:', error);
       toast.error('Failed to save artist');
+    } finally {
+      setIsSavingArtist(false);
     }
   };
 
