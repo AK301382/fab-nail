@@ -113,6 +113,8 @@ const AdminServices = () => {
   };
 
   const handleSubmit = async () => {
+    if (isSavingService) return; // Prevent multiple submissions
+    setIsSavingService(true);
     try {
       if (editService) {
         await axios.put(`${API_URL}/api/services/${editService.id}`, formData);
@@ -126,6 +128,8 @@ const AdminServices = () => {
     } catch (error) {
       console.error('Error saving service:', error);
       toast.error(t('services.saveError'));
+    } finally {
+      setIsSavingService(false);
     }
   };
 
