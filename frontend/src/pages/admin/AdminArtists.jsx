@@ -34,6 +34,9 @@ const AdminArtists = () => {
     years_experience: 0,
     image_url: ''
   });
+  
+  // Loading state
+  const [isSavingArtist, setIsSavingArtist] = useState(false);
 
   useEffect(() => {
     fetchArtists();
