@@ -246,15 +246,23 @@ const AdminArtists = () => {
             />
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setIsEditOpen(false)}>
+            <Button variant="outline" onClick={() => setIsEditOpen(false)} disabled={isSavingArtist}>
               {t('artists.cancel')}
             </Button>
             <Button
               onClick={handleSubmit}
+              disabled={isSavingArtist}
               style={{ backgroundColor: '#8B6F8E' }}
               className="text-white"
             >
-              {t('artists.save')}
+              {isSavingArtist ? (
+                <>
+                  <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+                  {t('common.loading')}
+                </>
+              ) : (
+                t('artists.save')
+              )}
             </Button>
           </DialogFooter>
         </DialogContent>
