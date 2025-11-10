@@ -55,56 +55,56 @@ const GalleryPage = () => {
 
   // Memoized default gallery data
   const defaultGallery = useMemo(() => [
-    {
-      id: '1', image_url: 'https://images.unsplash.com/photo-1611821828952-3453ba0f9408',
-      title_en: 'Elegant Minimalist', title_de: 'Eleganter Minimalist', title_fr: 'Minimaliste Élégant',
-      artist_name: 'Artist', style: 'Minimalist', colors: ['Nude', 'White'],
-    },
-    {
-      id: '2', image_url: 'https://images.unsplash.com/photo-1698308233758-d55c98fd7444',
-      title_en: 'Black & Silver Art', title_de: 'Schwarz & Silber Kunst', title_fr: 'Art Noir & Argent',
-      artist_name: 'Artist', style: 'Modern', colors: ['Black', 'Silver'],
-    },
-    {
-      id: '3', image_url: 'https://images.unsplash.com/photo-1617472556169-c5547fde3282',
-      title_en: 'Clean Design', title_de: 'Sauberes Design', title_fr: 'Design Épuré',
-      artist_name: 'Artist', style: 'Minimalist', colors: ['Nude', 'Pink'],
-    },
-    {
-      id: '4', image_url: 'https://images.unsplash.com/photo-1571290274554-6a2eaa771e5f',
-      title_en: 'Colorful Geometric', title_de: 'Buntes Geometrisch', title_fr: 'Géométrique Coloré',
-      artist_name: 'Artist', style: 'Modern', colors: ['Red', 'Orange', 'Yellow'],
-    },
-    {
-      id: '5', image_url: 'https://images.pexels.com/photos/6429663/pexels-photo-6429663.jpeg',
-      title_en: 'Professional Colorful', title_de: 'Professionell Bunt', title_fr: 'Coloré Professionnel',
-      artist_name: 'Artist', style: 'Artistic', colors: ['Pink', 'Purple', 'Blue'],
-    },
-    {
-      id: '6', image_url: 'https://images.unsplash.com/photo-1648844421638-0655d00dd5ba',
-      title_en: 'Glitter Glamour', title_de: 'Glitzer Glamour', title_fr: 'Glamour Pailletté',
-      artist_name: 'Artist', style: 'Glitter', colors: ['Gold', 'Silver'],
-    },
-    {
-      id: '7', image_url: 'https://images.unsplash.com/photo-1648844421727-cde6c4246b13',
-      title_en: 'Elegant Glitter', title_de: 'Eleganter Glitzer', title_fr: 'Paillettes Élégantes',
-      artist_name: 'Artist', style: 'Glitter', colors: ['Gold', 'Nude'],
-    },
-    {
-      id: '8', image_url: 'https://images.unsplash.com/photo-1648844421753-351afd50486a',
-      title_en: 'Professional Glitter', title_de: 'Professioneller Glitzer', title_fr: 'Paillettes Professionnelles',
-      artist_name: 'Artist', style: 'Glitter', colors: ['Silver', 'White'],
-    },
-    {
-      id: '9', image_url: 'https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg',
-      title_en: 'Colorful Display', title_de: 'Bunte Anzeige', title_fr: 'Affichage Coloré',
-      artist_name: 'Artist', style: 'Artistic', colors: ['Red', 'Blue', 'Green', 'Yellow'],
-    },
-    {
-      id: '10', image_url: 'https://images.pexels.com/photos/6830805/pexels-photo-6830805.jpeg',
-      title_en: 'Professional Art', title_de: 'Professionelle Kunst', title_fr: 'Art Professionnel',
-      artist_name: 'Artist', style: 'French', colors: ['Nude', 'White'],
-    },
+    // {
+    //   id: '1', image_url: 'https://images.unsplash.com/photo-1611821828952-3453ba0f9408',
+    //   title_en: 'Elegant Minimalist', title_de: 'Eleganter Minimalist', title_fr: 'Minimaliste Élégant',
+    //   artist_name: 'Artist', style: 'Minimalist', colors: ['Nude', 'White'],
+    // },
+    // {
+    //   id: '2', image_url: 'https://images.unsplash.com/photo-1698308233758-d55c98fd7444',
+    //   title_en: 'Black & Silver Art', title_de: 'Schwarz & Silber Kunst', title_fr: 'Art Noir & Argent',
+    //   artist_name: 'Artist', style: 'Modern', colors: ['Black', 'Silver'],
+    // },
+    // {
+    //   id: '3', image_url: 'https://images.unsplash.com/photo-1617472556169-c5547fde3282',
+    //   title_en: 'Clean Design', title_de: 'Sauberes Design', title_fr: 'Design Épuré',
+    //   artist_name: 'Artist', style: 'Minimalist', colors: ['Nude', 'Pink'],
+    // },
+    // {
+    //   id: '4', image_url: 'https://images.unsplash.com/photo-1571290274554-6a2eaa771e5f',
+    //   title_en: 'Colorful Geometric', title_de: 'Buntes Geometrisch', title_fr: 'Géométrique Coloré',
+    //   artist_name: 'Artist', style: 'Modern', colors: ['Red', 'Orange', 'Yellow'],
+    // },
+    // {
+    //   id: '5', image_url: 'https://images.pexels.com/photos/6429663/pexels-photo-6429663.jpeg',
+    //   title_en: 'Professional Colorful', title_de: 'Professionell Bunt', title_fr: 'Coloré Professionnel',
+    //   artist_name: 'Artist', style: 'Artistic', colors: ['Pink', 'Purple', 'Blue'],
+    // },
+    // {
+    //   id: '6', image_url: 'https://images.unsplash.com/photo-1648844421638-0655d00dd5ba',
+    //   title_en: 'Glitter Glamour', title_de: 'Glitzer Glamour', title_fr: 'Glamour Pailletté',
+    //   artist_name: 'Artist', style: 'Glitter', colors: ['Gold', 'Silver'],
+    // },
+    // {
+    //   id: '7', image_url: 'https://images.unsplash.com/photo-1648844421727-cde6c4246b13',
+    //   title_en: 'Elegant Glitter', title_de: 'Eleganter Glitzer', title_fr: 'Paillettes Élégantes',
+    //   artist_name: 'Artist', style: 'Glitter', colors: ['Gold', 'Nude'],
+    // },
+    // {
+    //   id: '8', image_url: 'https://images.unsplash.com/photo-1648844421753-351afd50486a',
+    //   title_en: 'Professional Glitter', title_de: 'Professioneller Glitzer', title_fr: 'Paillettes Professionnelles',
+    //   artist_name: 'Artist', style: 'Glitter', colors: ['Silver', 'White'],
+    // },
+    // {
+    //   id: '9', image_url: 'https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg',
+    //   title_en: 'Colorful Display', title_de: 'Bunte Anzeige', title_fr: 'Affichage Coloré',
+    //   artist_name: 'Artist', style: 'Artistic', colors: ['Red', 'Blue', 'Green', 'Yellow'],
+    // },
+    // {
+    //   id: '10', image_url: 'https://images.pexels.com/photos/6830805/pexels-photo-6830805.jpeg',
+    //   title_en: 'Professional Art', title_de: 'Professionelle Kunst', title_fr: 'Art Professionnel',
+    //   artist_name: 'Artist', style: 'French', colors: ['Nude', 'White'],
+    // },
   ], []);
 
   // Memoized data fetching

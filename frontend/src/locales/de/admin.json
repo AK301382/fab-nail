@@ -19,7 +19,7 @@
     "confirmedAppointments": "Bestätigte Termine"
   },
   "sidebar": {
-    "adminPanel": "Admin Panel",
+    "adminPanel": "Fabulous",
     "adminSubtitle": "Nagelsalon Verwaltung",
     "dashboard": "Übersicht",
     "appointments": "Termine",
@@ -202,6 +202,6 @@
     "whatsapp": "WhatsApp Nummer",
     "save": "Speichern",
     "updateSuccess": "Einstellungen erfolgreich aktualisiert",
-    "autoTranslate": "✨ Geschäftsname wird automatisch übersetzt"
+    "autoTranslate": "✨"
   }
 }

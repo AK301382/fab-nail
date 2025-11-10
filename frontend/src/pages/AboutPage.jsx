@@ -138,7 +138,7 @@ const AboutPage = () => {
 
   // Memoized statistics
   const stats = useMemo(() => [
-    { icon: TrendingUp, value: '15+', label: t('about.stat1') },
+    { icon: TrendingUp, value: '13+', label: t('about.stat1') },
     { icon: Users, value: '10K+', label: t('about.stat2') },
     { icon: Star, value: '5.0', label: t('about.stat3') },
     { icon: Calendar, value: '50K+', label: t('about.stat4') },

@@ -21,7 +21,7 @@ const HeroSlider = memo(({ images, currentIndex }) => (
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/70" />
       </div>
     ))}
   </div>
